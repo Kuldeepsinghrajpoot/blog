@@ -1,101 +1,59 @@
-import Image from "next/image";
+import React from 'react'
+import BlogPostCards from './blog/page';
+import Image from 'next/image';
 
-export default function Home() {
+function page() {
   return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-      <main className="flex flex-col gap-8 row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="https://nextjs.org/icons/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="list-inside list-decimal text-sm text-center sm:text-left font-[family-name:var(--font-geist-mono)]">
-          <li className="mb-2">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] px-1 py-0.5 rounded font-semibold">
-              src/app/page.tsx
-            </code>
-            .
-          </li>
-          <li>Save and see your changes instantly.</li>
-        </ol>
-
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="https://nextjs.org/icons/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:min-w-44"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
+    <main>
+      <section className="container px-4 py-10 mx-auto  z-50 lg:h-128 lg:space-x-8 lg:flex lg:items-center">
+        <div className="w-full text-center lg:text-left lg:w-1/2 lg:-mt-8">
+          <h1 className="text-3xl leading-snug text-card-foreground  md:text-4xl">
+            A <span className="font-semibold">free repository</span> for community.
+          </h1>
+         <p className="mt-4 text-lg">
+    Open source free repository <br className="hidden lg:block" /> enhance your coding learning experience!
+</p>
+          {/* <div className="mt-6 bg-transparent border rounded-lg  lg:w-2/3 focus-within:border-primary focus-within:ring focus-within:ring-primary dark:focus-within:border-primary focus-within:ring-opacity-20">
+            <form action="https://www.creative-tim.com/twcomponents/search" className="flex flex-wrap justify-between md:flex-row">
+              <input type="search" name="query" placeholder="Search Components" required={true} className="flex-1 h-10 px-4 m-1  placeholder-gray-400 bg-transparent border-none appearance-none lg:h-12  focus:outline-none focus:placeholder-transparent focus:ring-0" />
+              <Button type="submit" className="flex items-center justify-center w-full p-2 m-1 transition-colors duration-300 transform rounded-lg lg:w-12 lg:h-12 lg:p-0 bg-primary hover:bg-primary/70 focus:outline-none focus:bg-primary/70">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" className="w-6 h-6">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+                </svg>
+              </Button>
+            </form>
+          </div> */}
         </div>
-      </main>
-      <footer className="row-start-3 flex gap-6 flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="https://nextjs.org/icons/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="https://nextjs.org/icons/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="https://nextjs.org/icons/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
+        <div className="w-full mt-4 lg:mt-0 lg:w-1/2">
+          <Image src="/website-designer-bro-purple.svg" alt="blogs" className="w-full h-full max-w-md mx-auto" width={100} height={100} />
+        </div>
+      </section>
+      {/* price section */}
+      <section className='border-t'>
+
+        <BlogPostCards />
+      </section>
+
+
+      <footer className=" bg-muted/40 py-5 text-center border-t">
+    <div className="mb-5">
+      <p className="m-0">&copy; {new Date().getFullYear()} Student Power Club. All rights reserved.</p>
+      {/* <ul className="list-none p-0 flex justify-center gap-4 mt-2">
+        <li><a href="https://www.facebook.com/studentpowerclub" target="_blank" className="text-white no-underline hover:underline">Facebook</a></li>
+        <li><a href="https://www.twitter.com/studentpowerclub" target="_blank" className="text-white no-underline hover:underline">Twitter</a></li>
+        <li><a href="https://www.instagram.com/studentpowerclub" target="_blank" className="text-white no-underline hover:underline">Instagram</a></li>
+      </ul> */}
     </div>
-  );
+    <div>
+      {/* <p className="m-0">Contact us: <a href="mailto:info@studentpowerclub.com" className="text-white no-underline hover:underline">info@studentpowerclub.com</a></p> */}
+    </div>
+  </footer>
+
+
+    </main>
+  )
 }
+
+export default page
+
+
